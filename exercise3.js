@@ -4,10 +4,40 @@
     // 1) An event listener that, when the element is clicked, will turn the background color to green.
     // 2) An event listener that, when the element is double-clicked, will turn the background color to blue. 
 
+let cellOne = document.getElementById("cell-one")
+
+cellOne.addEventListener("click", () => {
+    cellOne.style.backgroundColor = "green"
+
+cellOne.addEventListener("dblclick", () => {
+    cellOne.style.backgroundColor = "blue"
+})
+})
+    
 // Next, we'll target the #cell-two element. We will give two event listeners to this element:
     // 1) An event listener that, when the element is hovered over, will turn the border into a green, 2px width, and solidly-lined border. 
     // 2) An event listener that, when the user removes their mouse from over the element, will turn the border back into a black, 2 px width, and solidly-lined border.  
 
+let cellTwo = document.getElementById("cell-two")
+
+cellTwo.addEventListener("mouseover", () => {
+    cellTwo.style.border = "2px solid green"
+
+cellTwo.addEventListener("mouseout", () => {
+    cellTwo.style.border = "2px solid black"
+})
+})
+
 // Lastly, we'll target the #cell-three element. We will give two event listeners to this element:
     // 1) An event listener that, when the element is clicked, will fill the element with a text of "Stop clicking me!"
     // 2) An event listener that, when the element is right-clicked, will fill the element with a text of "No right clicking either!!"
+
+let cellThree = document.getElementById("cell-three")
+
+cellThree.addEventListener("click", () => {
+    cellThree.innerText = "Stop clicking me!"
+
+cellThree.addEventListener("contextmenu", () => {
+    cellThree.innerText = "No right clicking either!"
+})
+})
